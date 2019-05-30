@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Week 17" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Linux-Debug">
+				<Option output="bin/Debug/week_17_d" prefix_auto="1" extension_auto="0" />
+				<Option object_output="bin/Debug/obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="prg64" />
+					<Add library="freetype" />
+					<Add library="rt" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add directory="../lib/linux" />
+				</Linker>
+			</Target>
+			<Target title="Linux-Release">
+				<Option output="bin/Release/week_17" prefix_auto="1" extension_auto="0" />
+				<Option object_output="bin/Release/obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="prg64" />
+					<Add library="freetype" />
+					<Add library="rt" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add directory="../lib/linux" />
+				</Linker>
+			</Target>
+			<Target title="Windows-Debug">
+				<Option output="bin/Debug/week_17_d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin/Debug/obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="prg32" />
+					<Add library="freetype" />
+					<Add library="opengl32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add directory="../lib/windows/gcc" />
+				</Linker>
+			</Target>
+			<Target title="Windows-Release">
+				<Option output="bin/Release/week_17" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin/Release/obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="prg32" />
+					<Add library="freetype" />
+					<Add library="opengl32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add directory="../lib/windows/gcc" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pedantic-errors" />
+			<Add option="-pedantic" />
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../inc" />
+		</Compiler>
+		<Unit filename="inc/AISnake.hpp" />
+		<Unit filename="inc/collectables.hpp" />
+		<Unit filename="inc/dropoff.hpp" />
+		<Unit filename="inc/game_data.hpp" />
+		<Unit filename="inc/play_state.hpp" />
+		<Unit filename="inc/playerSnake.hpp" />
+		<Unit filename="inc/positions.hpp" />
+		<Unit filename="inc/snake.hpp" />
+		<Unit filename="inc/win_state.hpp" />
+		<Unit filename="log.txt" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/AISnake.cpp" />
+		<Unit filename="src/collectables.cpp" />
+		<Unit filename="src/dropoff.cpp" />
+		<Unit filename="src/play_state.cpp" />
+		<Unit filename="src/playerSnake.cpp" />
+		<Unit filename="src/snake.cpp" />
+		<Unit filename="src/win_state.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
